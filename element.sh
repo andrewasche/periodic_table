@@ -1,6 +1,5 @@
 #! /bin/bash
 PSQL="psql -X --username=freecodecamp --dbname=periodic_table --tuples-only -c"
-#echo -e "\n~~~~ Periodic Table ~~~~\n"
 
 if [[ -z $1 ]]
 then
@@ -23,7 +22,7 @@ else
   if [[ ! -z $FOUND ]]
   then
     # echo $FOUND
-    echo "$FOUND" | while read ATOMIC_NUMBER BAR SYMBOL BAR NAME BAR BAR BAR BAR BAR ATOM_MASS BAR MELTP BAR BOILP BAR BAR BAR TID BAR TYPE
+    echo "$FOUND" | while read ATOMIC_NUMBER BAR SYMBOL BAR NAME BAR BAR BAR ATOM_MASS BAR MELTP BAR BOILP BAR BAR BAR TID BAR TYPE
     do
       echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOM_MASS amu. $NAME has a melting point of $MELTP celsius and a boiling point of $BOILP celsius."
     done
